@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy to Localhost') {
             steps {
                 echo 'Deploying website to XAMPP htdocs...'
-                bat 'xcopy * C:\\xampp\\htdocs /E /Y'
+                bat 'xcopy . "C:\\xampp\\htdocs\\" /E /I /Y /H'
             }
         }
     }
